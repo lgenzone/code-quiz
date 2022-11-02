@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    border: 1px solid red;
+    font-family: monospace;
+}
+
+body {
+    background-color: black;
+}
+
+p {
+    color: white;
+    font-size: 16px;
+}
+
+button {
+    outline: none;
+    background-color: black;
+    color: white;
+
+}
+
+/* Outside Container */
+.outside-container {
+    padding: 10px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+/* Top Section Container */
+.top p {
+    float: right;
+}
+
+/* Inside Container */
+.inside-container {
+    background-color: white;
+    height: 100%;
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* Header/Quiz Intro */
+
+/* Main Quiz Content */
