@@ -8,19 +8,28 @@
 }
 
 body {
-    background-color: black;
+    background-color: rgb(82, 75, 75);
+    /* overflow: hidden; */
 }
+
 
 p {
     color: white;
     font-size: 16px;
+    text-align: center;
 }
 
 button {
     outline: none;
     background-color: black;
     color: white;
+    font-size: 16px;
+}
 
+h1, h2 {
+    color: white;
+    text-align: center;
+    
 }
 
 /* Outside Container */
@@ -39,12 +48,29 @@ button {
 
 /* Inside Container */
 .inside-container {
-    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: black;
     height: 100%;
     width: 50%;
     margin: 0 auto;
 }
 
 /* Header/Quiz Intro */
+.intro {
+    padding: 20% 10% 30% 10%;
+    
+}
+
+.intro button {
+    display: block  ;
+    margin: 0 auto;
+}
 
 /* Main Quiz Content */
+main {
+    display: none; /* get rid of bottom line */
+    
+ 
+}
