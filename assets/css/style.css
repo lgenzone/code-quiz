@@ -59,6 +59,7 @@ h1, h2 {
 
 /* Header/Quiz Intro */
 .intro {
+    display: none; /* in/visible by default */
     padding: 20% 10% 30% 10%;
     
 }
@@ -70,7 +71,27 @@ h1, h2 {
 
 /* Main Quiz Content */
 main {
-    display: none; /* get rid of bottom line */
+    display: block; /* in/visible */
     
- 
 }
+
+.questions {
+    display: none; /* in/visible by default */
+}
+
+
+/* finish screen */
+.finish-screen {
+    display: none; /* in/visible by default */
+}  
+
+/* high scores screen */
+.high-scores {
+    display: block; /* in/visible by default */
+}
+
+.high-scores ol {
+    /* overflow: scroll; */
+    /* set the max/min height ie: ~200px  */
+}
+  
