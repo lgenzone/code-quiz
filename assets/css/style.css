@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 
-    border: 1px solid red;
+    
     font-family: monospace;
 }
 
@@ -59,7 +59,7 @@ h1, h2 {
 
 /* Header/Quiz Intro */
 .intro {
-    display: none; /* in/visible by default */
+    display: block; /* in/visible by default */
     padding: 20% 10% 30% 10%;
     
 }
@@ -71,7 +71,7 @@ h1, h2 {
 
 /* Main Quiz Content */
 main {
-    display: block; /* in/visible */
+    display: none; /* in/visible */
     
 }
 
@@ -87,7 +87,7 @@ main {
 
 /* high scores screen */
 .high-scores {
-    display: block; /* in/visible by default */
+    display: none; /* in/visible by default */
 }
 
 .high-scores ol {
