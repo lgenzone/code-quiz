@@ -21,17 +21,31 @@ var questionsArray = [
         answers: ["<Javascript>", "<Script>", "<Scripting>", "<Js>" ],
         correctAnswer: "<Script>",
     },
+    {
+        question: 'What HTML element do we put the javascript?',
+        answers: ["<Javascript>", "<Script>", "<Scripting>", "<Js>" ],
+        correctAnswer: "<Script>",
+    },
+    {
+        question: 'What HTML element do we put the javascript?',
+        answers: ["<Javascript>", "<Script>", "<Scripting>", "<Js>" ],
+        correctAnswer: "<Script>",
+    },
+    {
+        question: 'What HTML element do we put the javascript?',
+        answers: ["<Javascript>", "<Script>", "<Scripting>", "<Js>" ],
+        correctAnswer: "<Script>",
+    },
     { 
-    question: 'What HTML element do we put the javascript?',
-    answers: ["<Javascript>", "<Script>", "<Scripting>", "<Js>" ],
-    correctAnswer: "<Script>",
+        question: 'What HTML element do we put the javascript?',
+        answers: ["<Javascript>", "<Script>", "<Scripting>", "<Js>" ],
+        correctAnswer: "<Script>",
     }
 
    ]
 
 
 startEl.addEventListener("click", function(){
-    console.log("button was clicked");
     startQuiz();
 });
 
@@ -61,6 +75,7 @@ var startTimer = function() {
 
 }
 
+// stop timer
 function endQuiz() {
     // hide questions div and show main scores
     clearInterval();
@@ -68,7 +83,7 @@ function endQuiz() {
 }
 
 
-
+// displaying questions and answers from questionsArray
 var questionIndex = 0;
 function getQuestions() { 
     var currentQuestion = questionsArray[questionIndex];
@@ -79,7 +94,8 @@ function getQuestions() {
     answerC.textContent = questionsArray[questionIndex].answers[2];
     answerD.textContent = questionsArray[questionIndex].answers[3];
 
-}
+} 
+
 
 function checkAnswer(selected) {
     var correctChoice = questionsArray[questionIndex].correctAnswer;
@@ -91,8 +107,6 @@ function checkAnswer(selected) {
     } else {
         alert("Wrong");
         time -= 5;
-
-    
     
     };
 
