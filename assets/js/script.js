@@ -104,6 +104,7 @@ function checkAnswer(selected) {
 
 };
 
+// event listeners
 answerA.addEventListener("click", function(){
     checkAnswer(answerA.textContent);
  });
