@@ -5,6 +5,15 @@
     <title>Code Quiz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Indie+Flower&family=Permanent+Marker&display=swap" rel="stylesheet">
     
 
 </head>
@@ -15,7 +24,8 @@
         <!--top section w/ timer and top scores-->
         <div class="top">
             <button>view high scores</button>
-            <p id="timer">timer</p>
+             <!--<p id="timer">timer</p-->
+            <div class="timer">Time Remaining:<span id = "time">00:00</span></div>
         </div>
 
         <!--inner div-->
@@ -24,16 +34,16 @@
 
         
             <!--main header/quiz intro-->
-             <header class="intro">
+             <header id="intro" class="start">
                 <h1>Coding Quiz</h1>
                 <p>Test your JavaScript knowledge with this short quiz!</p>
-                <button>Start Quiz!</button>
+                <button id="start">Start Quiz!</button>
 
             </header>
             <!--main quiz content-->
             <main>
             <!--questions section-->
-                <section class="questions">
+                <section id="questions" class="hide">
                     <h2>Questions</h2>
                     <ul>
                         <!--placeholder: use JS to generate-->
@@ -45,7 +55,7 @@
 
                 </section>
                 <!--screen displayed after user completes quiz-->
-                <section class="finish-screen"> 
+                <section id="finish-screen" class="hide"> 
                     <h2>Nice work!!</h2>
                     <p>Score:</p>
                     <!--Third Party APIs 05-Ins_Form-Elements-->
@@ -58,7 +68,7 @@
                 </section>
                 
                 <!--high scores screen-->
-                <section class="high-scores">
+                <section id="high-scores" class="hide">
                     <h2>High Scores:</h2>
                         <!--unordered list to rank scores-->
                         <ol>

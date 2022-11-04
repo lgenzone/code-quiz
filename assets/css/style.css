@@ -1,5 +1,4 @@
 * {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
 
@@ -8,8 +7,10 @@
 }
 
 body {
-    background-color: rgb(82, 75, 75);
-    /* overflow: hidden; */
+    background-image: url("../images/pexels-alexander-kovalev-2847648.jpeg"); 
+    background-size: cover;
+    
+   
 }
 
 
@@ -17,6 +18,10 @@ p {
     color: white;
     font-size: 16px;
     text-align: center;
+}
+
+p #timer {
+    float: right;
 }
 
 button {
@@ -33,7 +38,7 @@ h1, h2 {
 }
 
 /* Outside Container */
-.outside-container {
+#outside-container {
     padding: 10px;
     height: 100vh;
     display: flex;
@@ -42,12 +47,12 @@ h1, h2 {
 }
 
 /* Top Section Container */
-.top p {
+#top p {
     float: right;
 }
 
 /* Inside Container */
-.inside-container {
+#inside-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -58,13 +63,13 @@ h1, h2 {
 }
 
 /* Header/Quiz Intro */
-.intro {
+#intro {
     display: block; /* in/visible by default */
     padding: 20% 10% 30% 10%;
     
 }
 
-.intro button {
+#intro button {
     display: block  ;
     margin: 0 auto;
 }
@@ -75,22 +80,22 @@ main {
     
 }
 
-.questions {
+#questions {
     display: none; /* in/visible by default */
 }
 
 
 /* finish screen */
-.finish-screen {
+#finish-screen {
     display: none; /* in/visible by default */
 }  
 
 /* high scores screen */
-.high-scores {
+#high-scores {
     display: none; /* in/visible by default */
 }
 
-.high-scores ol {
+#high-scores ol {
     /* overflow: scroll; */
     /* set the max/min height ie: ~200px  */
 }
