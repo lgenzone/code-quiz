@@ -9,7 +9,7 @@
 body {
     background-image: url("../images/pexels-alexander-kovalev-2847648.jpeg"); 
     background-size: cover;
-    
+
    
 }
 
@@ -64,35 +64,35 @@ h1, h2 {
 
 /* Header/Quiz Intro */
 #intro {
-    display: block; /* in/visible by default */
+   /* display: block;  in/visible by default */
     padding: 20% 10% 30% 10%;
     
 }
 
 #intro button {
-    display: block  ;
+  /*  display: block  ;*/
     margin: 0 auto;
 }
 
 /* Main Quiz Content */
 main {
-    display: none; /* in/visible */
+   /* display: none; /* in/visible */
     
 }
 
-#questions {
+.hide {
     display: none; /* in/visible by default */
 }
 
 
 /* finish screen */
 #finish-screen {
-    display: none; /* in/visible by default */
+   /* display: none; /* in/visible by default */
 }  
 
 /* high scores screen */
 #high-scores {
-    display: none; /* in/visible by default */
+  /*  display: none; /* in/visible by default */
 }
 
 #high-scores ol {
