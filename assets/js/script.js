@@ -22,9 +22,9 @@ var questionsArray = [
         correctAnswer: "<Script>",
     },
     { 
-    question: 'What HTML element do we put the javascript?',
-    answers: ["<Javascript>", "<Script>", "<Scripting>", "<Js>" ],
-    correctAnswer: "<Script>",
+        question: 'What HTML element do we put the javascript?',
+        answers: ["<Javascript>", "<Script>", "<Scripting>", "<Js>" ],
+        correctAnswer: "<Script>",
     }
 
    ]
