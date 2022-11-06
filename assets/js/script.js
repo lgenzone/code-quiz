@@ -13,6 +13,7 @@ var questionsEl = document.querySelector("questions");
 var answersEl = document.querySelector("#answers");
 var notifyEl = document.querySelector("#notify-user");
 var submitButton = document.querySelector("#submit");
+var highscoresEl = document.querySelector("#highscores-screen");
 
 // DOM variables
 
@@ -154,8 +155,35 @@ function logHighScore() {
 }
 
 // submit button 
-submitButton.onclick = logHighScore;
+submitButton.onclick = displayHighScores;
 
+
+function displayHighScores() {
+
+
+    var highScoreScreen = document.getElementById("finish-screen");
+    highScoreScreen.setAttribute("class", "hide");
+
+    highscoresEl.removeAttribute("class");
+
+    
+};
+
+// print high scores to screen
+function highScores() {
+    var highScores = JSON.parse(Window.localStorage.getItem("highScores")) || [];
+
+};
+
+// put highscores into a list 
+highScores.forEach(function(score) {
+    var list = document.createElement("li");
+    list.textContent = score.userInitials + score.score;
+
+    var listEl = document.getElementById("highScores");
+    listEl.appendChild(list);
+
+});
 
 
 
