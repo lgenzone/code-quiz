@@ -12,6 +12,7 @@ var question = document.getElementById("question");
 var questionsEl = document.querySelector("questions");
 var answersEl = document.querySelector("#answers");
 var notifyEl = document.querySelector("#notify-user");
+var submitButton = document.querySelector("#submit");
 
 // DOM variables
 
@@ -39,7 +40,7 @@ var questionsArray = [
     {
         question: "How to write an IF statement in JavaScript?",
         answers: ["if (i == 5)", "if i = 5", "if i = 5 then", "if i == 5 then"],
-        correctAnswer: "if (i==5)"
+        correctAnswer: "if (i == 5)"
     },
     {
         question: "How does a FOR loop start?",
@@ -123,7 +124,6 @@ function endQuiz(){
     questionsEl.setAttribute("class", "hide");
 }
 
-// start timer 
 // timer counts down and stops when reaches zero
 var startTimer = function() {
     time--;
@@ -134,6 +134,31 @@ var startTimer = function() {
     }
 
 }
+
+function logHighScore() {
+    var userInitials = userInitials.value();
+
+    if (userInitials !== "") {
+
+     var highScoresList =
+        JSON.parse(window.localStorage.getItem("highScoresList")) || [];
+
+        var userScore = {
+            score: time,
+            initials: userInitials
+        };
+    };
+
+    highScoresList.push(userScore);
+    window.localStorage.setItem("highScoresList" , JSON.stringify(highScoresList));
+}
+
+// submit button 
+submitButton.onclick = logHighScore;
+
+
+
+
 
 
 
