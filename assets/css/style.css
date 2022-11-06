@@ -38,7 +38,7 @@ h1, h2 {
 }
 
 /* Outside Container */
-#outside-container {
+#container {
     padding: 10px;
     height: 100vh;
     display: flex;
