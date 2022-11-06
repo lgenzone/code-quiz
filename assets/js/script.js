@@ -9,6 +9,7 @@ var answerC = document.getElementById("answer-c");
 var answerD = document.getElementById("answer-d");
 var answerE = document.getElementById("answer-e");
 var question = document.getElementById("question");
+var questionsEl = document.querySelector("questions");
 var answersEl = document.querySelector("#answers");
 var notifyEl = document.querySelector("#notify-user");
 
@@ -87,9 +88,8 @@ function getQuestions() {
         choiceClick.setAttribute("class", "answer");
         choiceClick.setAttribute("value", answer);
         choiceClick.textContent = (i + 1 + ". " + answer);
-        // add xlixk
+        // add click event to each answer choice 
         choiceClick.onclick = checkAnswer;
-
         answersEl.appendChild(choiceClick);
     });
 
@@ -119,9 +119,12 @@ function endQuiz(){
     // display finish screen 
     var quizFinishEl = document.getElementById("finish-screen");
     quizFinishEl.removeAttribute("class");
+    // remove questions screen 
+    questionsEl.setAttribute("class", "hide");
 }
 
 // start timer 
+// timer counts down and stops when reaches zero
 var startTimer = function() {
     time--;
     timerEl.textContent = time;
@@ -131,5 +134,6 @@ var startTimer = function() {
     }
 
 }
+
 
 
