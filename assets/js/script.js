@@ -70,23 +70,6 @@ function startQuiz() {
     getQuestions();
 }
 
-/* var questionIndex = 0;
-function getQuestions() { 
-    var currentQuestion = questionsArray[questionIndex];
-    question.textContent = currentQuestion.question;
-    
-    answerA.textContent = questionsArray[questionIndex].answers[0];
-    answerB.textContent = questionsArray[questionIndex].answers[1];
-    answerC.textContent = questionsArray[questionIndex].answers[2];
-    answerD.textContent = questionsArray[questionIndex].answers[3];
-    answerE.textContent = questionsArray[questionIndex].answers[4];
-
-  // prompts new question
-  var questEl = document.getElementById("question");
-  questEl.textContent = currentQuestion.question;
-
-} */
-
 var questionIndex = 0;
 function getQuestions() {
     // display question from object in array
@@ -102,8 +85,9 @@ function getQuestions() {
     currentQuestion.answers.forEach(function(answer, i) {
         var choiceClick = document.createElement("button");
         choiceClick.setAttribute("class", "answer");
+        choiceClick.setAttribute("value", answer);
         choiceClick.textContent = (i + 1 + ". " + answer);
-
+        // add xlixk
         choiceClick.onclick = checkAnswer;
 
         answersEl.appendChild(choiceClick);
@@ -129,30 +113,13 @@ function checkAnswer(){
     }
 }
 
-
-
-
-
-/* function checkAnswer(selected) {
-    var correctChoice = questionsArray[questionIndex].correctAnswer;
-    // conditional statement 
-    if(selected === correctChoice) {
-        //tells user whether or not they answered correctly
-        alert("You are correct!");
-
-    } else {
-        alert("Wrong");
-        time -= 5;
-    };
-
-    if (questionIndex === questionsArray.length -1) {
-        endQuiz();
-    } else {
-        questionIndex++;
-        getQuestions();
-
-}; */
-
+function endQuiz(){
+    // stop timer
+    clearInterval(timeId);
+    // display finish screen 
+    var quizFinishEl = document.getElementById("finish-screen");
+    quizFinishEl.removeAttribute("class");
+}
 
 // start timer 
 var startTimer = function() {
@@ -165,25 +132,4 @@ var startTimer = function() {
 
 }
 
-function endQuiz() {
-    // hide questions div and show main scores
-    clearInterval();
-
-}
-
-
-
-// event listeners
-answerA.addEventListener("click", function(){
-    checkAnswer(answerA.textContent);
- });
- answerB.addEventListener("click", function(){
-    checkAnswer(answerB.textContent);
- });
- answerC.addEventListener("click", function(){
-    checkAnswer(answerC.textContent);
- });
- answerD.addEventListener("click", function(){
-    checkAnswer(answerD.textContent);
- });
 
