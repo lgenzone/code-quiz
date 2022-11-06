@@ -10,6 +10,7 @@ var answerD = document.getElementById("answer-d");
 var answerE = document.getElementById("answer-e");
 var question = document.getElementById("question");
 var answersEl = document.querySelector("#answers");
+var notifyEl = document.querySelector("#notify-user");
 
 // DOM variables
 
@@ -57,8 +58,10 @@ function startQuiz() {
     // displays questions page and hides intro page
     var startScreenEl = document.getElementById("intro");
     startScreenEl.setAttribute("class", "hide");
+    // displays questions screen 
     var questionsEl = document.getElementById("questions-page");
     questionsEl.removeAttribute("class");
+
     timeRemaining = time;
     // start timer
     timeId = setInterval(startTimer, 1000);
@@ -86,13 +89,16 @@ function getQuestions() {
 
 var questionIndex = 0;
 function getQuestions() {
+    // display question from object in array
     var currentQuestion = questionsArray[questionIndex];
-
+    //promts new question
     var questEl = document.getElementById("question");
     questEl.textContent = currentQuestion.question;
 
+    // removes previous questions 
     answersEl.innerHTML = "";
 
+    // calls function for each element in the questionsArray
     currentQuestion.answers.forEach(function(answer, i) {
         var choiceClick = document.createElement("button");
         choiceClick.setAttribute("class", "answer");
@@ -104,6 +110,27 @@ function getQuestions() {
     });
 
 }
+
+function checkAnswer(){
+    if (this.value !== questionsArray[questionIndex].correctAnswer) {
+        notifyEl.textContent = "Incorrect"
+        // 5 second time penalty for incorrect answers
+        time -= 5;
+    } else {
+        notifyEl.textContent = "Correct!"
+    }
+    // next question
+    questionIndex++;
+    // next question or end quiz 
+    if (questionIndex === questionsArray.length) {
+        endQuiz();
+    } else {
+        getQuestions();
+    }
+}
+
+
+
 
 
 /* function checkAnswer(selected) {
@@ -158,5 +185,5 @@ answerA.addEventListener("click", function(){
  });
  answerD.addEventListener("click", function(){
     checkAnswer(answerD.textContent);
- });}
+ });
 
