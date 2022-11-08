@@ -9,10 +9,7 @@
 body {
     background-image: url("../images/pexels-alexander-kovalev-2847648.jpeg"); 
     background-size: cover;
-
-   
 }
-
 
 p {
     color: white;
@@ -20,15 +17,19 @@ p {
     text-align: center;
 }
 
-p #timer {
+div .timer {
     float: right;
+    color: white;
+    font-size: large;
+    margin: 10px 10px;
 }
 
 button {
     outline: none;
-    background-color: black;
+    background-color: #553E4E;
     color: white;
-    font-size: 16px;
+    font-size: 24px;
+    
 }
 
 h1, h2 {
@@ -67,11 +68,6 @@ h1, h2 {
    /* display: block;  in/visible by default */
     padding: 20% 10% 30% 10%;
     
-}
-
-#intro button {
-  /*  display: block  ;*/
-    margin: 0 auto;
 }
 
 /* Main Quiz Content */
