@@ -1,25 +1,17 @@
 // variables
-var  time = 60;
+let time = 60;
 var timeRemaining = "";
 var timeId;
 var questionIndex = 0;
-var answerA = document.getElementById("answer-a");
-var answerB = document.getElementById("answer-b");
-var answerC = document.getElementById("answer-c");
-var answerD = document.getElementById("answer-d");
-var answerE = document.getElementById("answer-e");
+var userInitials = "";
+
+// DOM variables
+var timerEl = document.getElementById("time");
+var startEl = document.getElementById("start");
 var question = document.getElementById("question");
 var questionsEl = document.querySelector("questions");
 var answersEl = document.querySelector("#answers");
 var notifyEl = document.querySelector("#notify-user");
-var submitButton = document.querySelector("#submit");
-var highscoresEl = document.querySelector("#highscores-screen");
-var scoreList = [];
-
-// DOM variables
-
-var timerEl = document.getElementById("time");
-var startEl = document.getElementById("start");
 
 
 // questions Array - create objects for each question
@@ -133,7 +125,7 @@ function endQuiz(){
 document.getElementById("submit").addEventListener("click", displayHighScores);
 
 
-
+//after all questions are answered and user submits score, display high scores screen
 function displayHighScores() {
     // hides finish screen
     quizFinishEl = document.getElementById("finish-screen");
@@ -153,65 +145,28 @@ var startTimer = function() {
     if(time <= 0) {
         endQuiz();
     }
-}
-
-function getScore(){
-    var loggedScore = JSON.parse(localStorage.getItem("highScore"));
-    if (loggedScore !== null) {
-        scoreList = loggedScore;
-    }
-}
-
-function saveScore () {
-    localStorage.setItem("highScore", JSON.stringify(scoreList));
-}
-
-
-function logHighScore() {
-    var userInitials = userInitials.value();
-
-    if (userInitials !== "") {
-
-     var highScoresList =
-        JSON.parse(window.localStorage.getItem("highScoresList")) || [];
-
-        var userScore = {
-            score: time,
-            initials: userInitials
-        };
-    };
-
-    highScoresList.push(userScore);
-    window.localStorage.setItem("highScoresList" , JSON.stringify(highScoresList));
-}
-
-
-
-
-
-
-
-
-
-
-/*
-// print high scores to screen
-function highScores() {
-    var highScores = JSON.parse(Window.localStorage.getItem("highScores")) || [];
-
 };
 
+// log score and intials to local storage
+let highscore = {
+    initials: userInitials,
+    score: time
+};
 
-// put highscores into a list 
-highScores.forEach(function(score) {
-    var list = document.createElement("li");
-    list.textContent = score.userInitials + score.score;
+let highscoreConvert = JSON.stringify(highscore);
+localStorage.setItem("highscore", highscoreConvert);
 
-    var listEl = document.getElementById("highScores");
-    listEl.appendChild(list);
+let highscoreObj = JSON.parse(localStorage.getItem("highscore"));
+console.log(highscoreObj);
 
-});
-*/
+//TODO
+// initals and time
+// print highscores to screen 
+// 'view high scores' button display saved scores 
+// correct/incorrect alert needs to disappear when quiz ends
+
+
+
 
 
 
