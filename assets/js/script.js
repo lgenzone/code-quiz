@@ -2,16 +2,28 @@
 var  time = 60;
 var timeRemaining = "";
 var timeId;
+<<<<<<< Updated upstream
 var answerA = document.getElementById("answer-a");
 var answerB = document.getElementById("answer-b");
 var answerC = document.getElementById("answer-c");
 var answerD = document.getElementById("answer-d");
 var question = document.getElementById("question");
+=======
+var questionIndex = 0;
+>>>>>>> Stashed changes
 
 // DOM variables
 
 var timerEl = document.getElementById("time");
 var startEl = document.getElementById("start");
+<<<<<<< Updated upstream
+=======
+var question = document.getElementById("question");
+var questionsEl = document.querySelector("questions");
+var answersEl = document.querySelector("#answers");
+var notifyEl = document.querySelector("#notify-user");
+var initalsEl = document.querySelector
+>>>>>>> Stashed changes
 
 
 // questions Array - create objects for each question
@@ -72,6 +84,21 @@ var startTimer = function() {
     if(time <= 0) {
         endQuiz();
     }
+<<<<<<< Updated upstream
+=======
+};
+// log users intials
+function logHighScore() [
+    // get value of input box
+    var userInitials = 
+]
+
+localStorage.setItem("initals", "lg");
+localStorage.setItem("score", "13");
+console.log(localStorage.getItem("initals"));
+
+
+>>>>>>> Stashed changes
 
 }
 
