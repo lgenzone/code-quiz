@@ -12,7 +12,7 @@ There is no installation required. To access the webpage, click the deployed URL
 
 ## Usage 
 
-To access the webpage, (click here)[https://lgenzone.github.io/code-quiz/]
+To access the webpage, [click here](https://lgenzone.github.io/code-quiz/)
 * To begin, click the 'Start Quiz' button
 * Answer each question
 * Once all questions are answered, you will be prompted to enter your initials 
