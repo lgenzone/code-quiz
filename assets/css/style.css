@@ -1,35 +1,39 @@
 * {
     padding: 0;
     box-sizing: border-box;
-
-    
     font-family: monospace;
 }
 
 body {
-    background-image: url("../images/pexels-alexander-kovalev-2847648.jpeg"); 
-    background-size: cover;
+    background-color: #ECEBE4;
 }
 
 p {
-    color: white;
+    color: #153B50;
     font-size: 16px;
     text-align: center;
 }
 
 div .timer {
+    color: #153B50;
+    font-size: 24px;
     float: right;
-    color: white;
-    font-size: large;
-    margin: 10px 10px;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
-button {
+#highscores-btn {
     outline: none;
-    background-color: #553E4E;
-    color: white;
+    color: #153B50;
+    font-size: 24px;   
+}
+
+.answer {
+    outline: none;
+    background-color: #CC998D;
+    color: #153B50;
     font-size: 24px;
-    
+    width: 50%;
 }
 
 h1, h2 {
@@ -65,34 +69,25 @@ h1, h2 {
 
 /* Header/Quiz Intro */
 #intro {
-   /* display: block;  in/visible by default */
-    padding: 20% 10% 30% 10%;
-    
+    text-align: center;
+    margin-top: 5%;   
 }
 
-/* Main Quiz Content */
-main {
-   /* display: none; /* in/visible */
-    
+#submit-score {
+    text-align: center;
 }
 
 .hide {
     display: none; /* in/visible by default */
 }
 
-
-/* finish screen */
-#finish-screen {
-   /* display: none; /* in/visible by default */
-}  
-
-/* high scores screen */
-#high-scores {
-  /*  display: none; /* in/visible by default */
+#highscores-screen {
+    margin-left: 10%;
+    
 }
 
-#high-scores ol {
-    /* overflow: scroll; */
-    /* set the max/min height ie: ~200px  */
+#high-scores-btn {
+    display: none;
 }
-  
+
+
